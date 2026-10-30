@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Sunny.UI;
 
-namespace WindowsFormsApp1
+namespace PlcAxisControl
 {
     partial class Form1
     {
