@@ -15,8 +15,8 @@ namespace PlcAxisControl
         public const string Axis1Home = "M0.0";    // 回零指令
                                                    //  public const string Axis1HomeDone = "M10.0";   // 回零完成
         public const string Axis1Trigger = "M1.0";    // 绝对定位启动（按 1 松 0）
-        public const string Axis1JogPos = "M3.0";    // 手动正（右移）
-        public const string Axis1JogNeg = "M3.1";    // 手动负（左移）
+        public const string Axis1JogPos = "M3.1";    // 右移（按现场方向映射）
+        public const string Axis1JogNeg = "M3.0";    // 左移（按现场方向映射）
         public const string Axis1Pos = "VD100";   // 当前位置
         public const string Axis1Speed = "VD104";   // 当前速度
         public const string Axis1ManualSpeed = "VD2108";  // 手动速度
@@ -36,8 +36,8 @@ namespace PlcAxisControl
         public const string Axis2Home = "M0.1";    // 回零指令
         public const string Axis2HomeDone = "M10.1";   // 回零完成
         public const string Axis2Trigger = "M1.1";    // 绝对定位启动
-        public const string Axis2JogPos = "M3.4";    // 手动正
-        public const string Axis2JogNeg = "M3.5";    // 手动负
+        public const string Axis2JogPos = "M3.5";    // 右移（按现场方向映射）
+        public const string Axis2JogNeg = "M3.4";    // 左移（按现场方向映射）
         public const string Axis2Pos = "VD2024";  // 当前位置
         public const string Axis2Speed = "VD2028";  // 当前速度
         public const string Axis2ManualSpeed = "VD2112";  // 手动速度

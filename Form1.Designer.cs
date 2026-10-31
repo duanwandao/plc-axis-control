@@ -77,12 +77,10 @@ namespace PlcAxisControl
             this.btnHome = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.tmr_Refresh = new System.Windows.Forms.Timer(this.components);
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.grpSignals.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTarget)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -340,6 +338,7 @@ namespace PlcAxisControl
             this.btnMove.TabIndex = 14;
             this.btnMove.Text = "定位启动";
             this.btnMove.UseVisualStyleBackColor = true;
+            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
             // 
             // btnJogNegative
             // 
@@ -349,6 +348,7 @@ namespace PlcAxisControl
             this.btnJogNegative.TabIndex = 15;
             this.btnJogNegative.Text = "左移";
             this.btnJogNegative.UseVisualStyleBackColor = true;
+            this.btnJogNegative.Click += new System.EventHandler(this.btnJogNegative_Click);
             // 
             // btnJogPositive
             // 
@@ -383,14 +383,6 @@ namespace PlcAxisControl
             // 
             this.tmr_Refresh.Interval = 200;
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(428, 362);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(180, 28);
-            this.numericUpDown1.TabIndex = 19;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
@@ -409,7 +401,6 @@ namespace PlcAxisControl
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1283, 700);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblAxisSelectCaption);
             this.Controls.Add(this.rdoAxis1);
@@ -437,13 +428,10 @@ namespace PlcAxisControl
             this.grpSignals.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTarget)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
-        private NumericUpDown numericUpDown1;
         private Button button1;
     }
 }
